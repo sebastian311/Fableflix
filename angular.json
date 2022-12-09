@@ -92,7 +92,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng-lts/resources/themes/tailwind-light/theme.css",
+              "node_modules/primeng-lts/resources/primeng.css"
             ],
             "scripts": []
           }
