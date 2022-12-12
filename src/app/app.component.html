@@ -74,10 +74,12 @@
   <h1 id="h1" style="font-size:3.5vw;">Întrebări frecvente</h1> <br/>
   <section class="faq">
     <div class="faq-one fa">
-      <h1 class="faq-title first" (click)="toggle('faq-one')">Ce este Fableflix?</h1>
-      <i class='bx bx-plus' id="first"></i>
-      <span class="second">x</span>
-
+      <div class="up" (click)="toggle('faq-one')">
+        <h1 class="faq-title first">Ce este Fableflix?</h1>
+        <i class='bx bx-plus' id="first"></i>
+        <span class="second">x</span>
+      </div>
+      
       <div class="faq-body">
           <p>Netflix este un serviciu de difuzare online care le permite abonaților să vizioneze o gamă largă de 
             titluri premiate, seriale, filme, animeuri, documentare și multe altele pe mii de dispozitive conectate la 
@@ -87,10 +89,12 @@
     </div>
 
     <div class="faq-two fa">
-      <h1 class="faq-title" (click)="toggle('faq-two')">Cât costă serviciul Fableflix?</h1>
-      <i class='bx bx-plus' id="first"></i>
-      <span class="second">x</span>
-
+      <div class="up" (click)="toggle('faq-two')">
+        <h1 class="faq-title">Cât costă serviciul Fableflix?</h1>
+        <i class='bx bx-plus' id="first"></i>
+        <span class="second">x</span>
+      </div>
+      
       <div class="faq-body">
         <p>Vizionează Netflix pe smartphone, tabletă, Smart TV, laptop sau orice dispozitiv de difuzare online, 
           întregul conținut fiind disponibil pentru un tarif lunar fix. Tariful abonamentelor variază de la 7,99 EUR 
@@ -99,9 +103,11 @@
     </div>
 
     <div class="faq-three fa">
-      <h1 class="faq-title" (click)="toggle('faq-three')">Lorem ipsum</h1>
-      <i class='bx bx-plus' id="first"></i>
-      <span class="second">x</span>
+      <div class="up" (click)="toggle('faq-three')">
+        <h1 class="faq-title">Lorem ipsum</h1>
+        <i class='bx bx-plus' id="first"></i>
+        <span class="second">x</span>
+      </div>
       
       <div class="faq-body">
         <p>More Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -112,4 +118,76 @@
 
   </section>
 </div>
+<br/>
+
+<div class="welcomeContainer">
+  <div class="text">
+    <h3 id="h3" style="font-size:1.5vw;">Ești gata de aventură? Introdu adresa de e-mail pentru a te abona sau pentru a reactiva abonamentul.</h3>
+  </div>
+
+  <div class="p-col-12 p-md-4" style="margin-bottom: 10%;">
+    <div class="ui-inputgroup" style="width:100% !important; margin:0 auto !important">
+        <button pButton type="button" label="Începe" id="startButton"></button>
+        <input type="email" style="width:80%; height:10vh; margin-left:5%" pInputText placeholder="Adresa de e-mail">         
+    </div>
+  </div>
+  
+</div>
+
 <div class="borderBottom"></div>
+
+<div class="footer">
+
+  <h3 class="rest" style="font-size:smaller; height: 10vh">Ai întrebări? Sună la 0800-672-xyz</h3>
+
+  <div class="mega-menu">
+    <div class="menu-one">
+      <ul>
+        <li><a href="#">Întrebări frecvente</a></li>
+        <li><a href="#">Relații cu investitorii</a></li>
+        <li><a href="#">Declarația de confidențialitate</a></li>
+        <li><a href="#">Test de viteză</a></li>
+      </ul>
+    </div>
+    <div class="menu-two">
+      <ul>
+        <li><a href="#">Asistență</a></li>
+        <li><a href="#">Cariere</a></li>
+        <li><a href="#">Preferințe de cookie</a></li>
+        <li><a href="#">Garanție legală</a></li>
+      </ul>
+    </div>
+  
+    <div class="menu-three">
+      <ul>
+        <li><a href="#">Cont</a></li>
+        <li><a href="#">Modalități de vizionare</a></li>
+        <li><a href="#">Informații legate de companie</a></li>
+        <li><a href="#">Mențiuni legale</a></li>
+      </ul>
+    </div>
+    <div class="menu-four">
+      <ul>
+        <li><a href="#">Centru media</a></li>
+        <li><a href="#">Condiții de utilizare</a></li>
+        <li><a href="#">Contactează-ne</a></li>
+        <li><a href="#">Doar pe Netflix</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="rest">
+    <p-dropdown [options]="language" [(ngModel)]="selectedLanguage" id="pristina">
+      <ng-template let-item pTemplate="selectedItem">
+        <span style="vertical-align:middle; margin-left: .5em"><i class='bx bx-globe'></i> &nbsp;{{item.label}}</span>
+    </ng-template>
+    </p-dropdown>
+  
+    <br/>
+  
+    Fableflix România
+  </div>
+
+</div>

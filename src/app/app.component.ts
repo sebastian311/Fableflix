@@ -20,13 +20,17 @@ export class AppComponent {
   }
 
   toggle(id) {
-    // document.getElementsByClassName("faq-one")[0].childNodes
-    // document.getElementsByClassName("faq-one")[0].childNodes[2].classList.add("inactive") and remove
     const faq = document.getElementsByClassName(id)[0];
-    (faq.childNodes[2] as any).classList.toggle("active");
-    (faq.childNodes[1] as any).classList.toggle("inactive");
-    // document.getElementsByClassName("faq-one")[0].childNodes[2].classList.toggle("active")
-    
 
+    (faq as any).classList.toggle("block");
+
+    (faq.childNodes[0].childNodes[2] as any).classList.toggle("active");
+    (faq.childNodes[0].childNodes[1] as any).classList.toggle("inactive");
+    
+    if ( (faq.childNodes[1] as any).style.display == "" ) {
+      (faq.childNodes[1] as any).style.display = "block";
+    } else {
+      (faq.childNodes[1] as any).style.display = "";
+    }
   }
 }

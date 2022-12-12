@@ -109,16 +109,38 @@
     .fa {
         background-color: #303030;
         height: 10vh;
-        /* padding-top: 8px; */
-        /* padding-left: 29px; */
         margin-bottom: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 5%;
+    }
+
+    .block {
+        background-color: #303030 !important;
+        height: 10vh !important;
+        margin-bottom: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .up {
+        cursor: pointer;
+        user-select: none;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
     }
 
     .faq {
-        width: 50%;
+        width: 60%;
     }
     .faq-title {
         cursor: pointer;
@@ -130,13 +152,18 @@
     /* Style the faq-page panel. Note: hidden by default */
     .faq-body {
         padding: 0 18px;
-        background-color: white;
+        background-color: #303030;
         display: none;
         overflow: hidden;
+    }
+
+    .bx {
+        font-size: xx-large !important;
     }
     
     .second {
         display: none;
+        font-size: xx-large !important;
     }
 
     .active {
@@ -144,5 +171,45 @@
     }
     .inactive {
         display: none !important;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50vh;
+    color: #737373;
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 5%;
+
+    .mega-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        ul {
+            list-style: none;
+
+            li {
+                height: 4vh;
+            }
+    
+            a {
+                color: #737373;
+            }
+        }
+    }
+
+    .rest {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        flex-wrap: wrap;
     }
 }
