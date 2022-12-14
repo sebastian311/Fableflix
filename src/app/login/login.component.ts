@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   checked: boolean;
+  showDetails: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+    return this.showDetails;
+  }
 }

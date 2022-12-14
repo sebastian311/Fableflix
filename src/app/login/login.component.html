@@ -19,7 +19,7 @@
         </div>
 
         <button pButton type="button" label="Conectare" class="ui-button-danger" id="connectBtn"></button>
-        <div class="checkboxWrapper">
+        <div class="checkboxWrapper" style="color: rgb(180, 180, 180)">
             <span class="rememberMe" style="float: left">
                 <p-checkbox [(ngModel)]="checked" binary="true"></p-checkbox>
                 Ține-mă minte
@@ -29,8 +29,16 @@
                 Ai nevoie de ajutor?
             </span>
         </div> <br/>
-        <div class="login-signup-now">Ești nou pe Fableflix? <a href="/register">Înregistrează-te acum</a></div>
-
-        <p><span>Această pagină este protejată prin Google reCAPTCHA pentru a ne asigura că nu ești un robot.</span>&nbsp;<button class="recaptcha-terms-of-use--link-button" data-uia="recaptcha-learn-more-button">Detalii.</button></p>
+        <div class="login-signup-now" style="color: gray; font-size: 2vh">Ești nou pe Fableflix? <a href="/register" style="color: white">Înregistrează-te acum</a></div>
+        <br/>
+        <p>
+            <span style="font-size:1.8vh; color: gray">
+                Această pagină este protejată prin Google reCAPTCHA pentru a ne asigura că nu ești un robot.
+            </span>
+            <span class="link" (click)="toggleDetails()">Detalii.</span></p>
+            <br/>
+            <span *ngIf="showDetails" style="color: gray; font-size: 1.5vh;">
+                Informațiile colectate prin Google reCAPTCHA respectă Declarația de confidențialitate și Condițiile de furnizare a serviciului Google, fiind folosite pentru furnizarea, întreținerea și îmbunătățirea serviciului reCAPTCHA și în scopuri de siguranță generală (nu sunt folosite în scopul publicității personalizate create de Google).
+            </span>
     </p-card>
 </div>

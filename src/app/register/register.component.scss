@@ -1,0 +1,34 @@
+html {
+    background-color: white !important;
+}
+
+.container {
+    position: absolute;
+    background-color: white !important;
+    color: black !important;
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 2%;
+    }
+
+    .connectBtn {
+        background-color: white !important;
+        border: none !important;
+        font-size: 2.5vh !important;
+        font-weight: 550 !important;
+        color: #333333 !important;
+    }
+}

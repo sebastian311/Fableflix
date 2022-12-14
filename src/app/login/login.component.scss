@@ -39,6 +39,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 120vh;
+    padding: 2%;
 }
 
 #card {
@@ -77,5 +78,11 @@
 
     .login-signup-now {
         margin-top: 5%;
+    }
+
+    .link {
+        cursor: pointer;
+        user-select: none !important;
+        color: #0035DC;
     }
 }
