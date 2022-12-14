@@ -1,0 +1,36 @@
+<div class="container">
+    <img src="../assets/fableflixloggo.png" alt="FableFlix" class="logo" style="width: 12rem"> <br/>
+
+    <p-card id="card">
+        <span class="connect">Conectare</span>
+
+        <div class="wrapper-input">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText> 
+                <label for="float-input" id="floatInput">E-mail sau număr de telefon</label>
+            </span>
+        </div>
+
+        <div class="wrapper-input">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText> 
+                <label for="float-input" id="floatInput">Parolă</label>
+            </span>
+        </div>
+
+        <button pButton type="button" label="Conectare" class="ui-button-danger" id="connectBtn"></button>
+        <div class="checkboxWrapper">
+            <span class="rememberMe" style="float: left">
+                <p-checkbox [(ngModel)]="checked" binary="true"></p-checkbox>
+                Ține-mă minte
+            </span>
+    
+            <span class="needHelp" style="float: right">
+                Ai nevoie de ajutor?
+            </span>
+        </div> <br/>
+        <div class="login-signup-now">Ești nou pe Fableflix? <a href="/register">Înregistrează-te acum</a></div>
+
+        <p><span>Această pagină este protejată prin Google reCAPTCHA pentru a ne asigura că nu ești un robot.</span>&nbsp;<button class="recaptcha-terms-of-use--link-button" data-uia="recaptcha-learn-more-button">Detalii.</button></p>
+    </p-card>
+</div>
