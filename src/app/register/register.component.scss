@@ -1,3 +1,30 @@
+:host ::ng-deep .mat-horizontal-stepper-header-container {
+    display: none !important;
+}
+
+:host ::ng-deep .mat-form-field {
+    width: 90% !important;
+}
+
+:host ::ng-deep .mat-checkbox-inner-container {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+:host ::ng-deep .mat-checkbox-checkmark-path {
+    stroke: #0071EB !important;
+}
+
+:host ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: white !important;
+}
+
+:host ::ng-deep .mat-checkbox-background, .mat-checkbox-frame {
+    border: 1px solid #0071EB !important;
+}
+
+////////////////////////////////////////////////////////////
+
 html {
     background-color: white !important;
 }
@@ -7,11 +34,13 @@ html {
     background-color: white !important;
     color: black !important;
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
 }
 
 .navbar {
     display: flex;
+    height: 11vh;
+    margin-top: 1%;
     align-items: center;
     padding: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -31,4 +60,92 @@ html {
         font-weight: 550 !important;
         color: #333333 !important;
     }
+}
+
+.content {
+    margin-left: 37%;
+    margin-right: 37%;
+    margin-top: 7%;
+    height: 65vh;
+
+    .screenContainer {
+        display: flex;
+        justify-content: center;
+        .screens {
+            width: 41vh;
+        }
+    }
+
+    #stepper {
+        margin-top: 2%;
+        text-align: left;
+        height: auto;
+ 
+        #stepperBtn {
+            width: 100%;
+            height: 8vh;
+            margin-top: 10%;
+            background-color: #E50914;
+            color: white;
+            font-family: sans-serif;
+            font-size: larger;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 0px !important;
+        }
+
+        .stepTitle {
+            color: #333333;
+            font-size: 0.8vw;
+        }
+
+        #regisForm {
+            margin-top: 2%;
+            width: 100%;
+        }
+
+        #check {
+            font-size: 6vw;
+            color: #E50914;
+        }
+
+        .stepContent {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .fixed-header {
+            width: 100%;
+            background-color: red;
+        }
+
+        .subscriptionGrid {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
+
+.alternativeStepStyle {
+    margin-top: 2% !important;
+    margin-left: 33% !important;
+    margin-right: 33% !important;
+}
+
+.alternativeStepStyleLarge {
+    margin-top: 2% !important;
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid black;
 }

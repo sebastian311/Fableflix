@@ -1,16 +1,145 @@
 <div class="container">
     <div class="navbar">
         <div class="left" >
-          <img src="../assets/fableflixloggo.png" alt="FableFlix" class="logo" style="width: 12rem">
+          <img src="../assets/fableflixloggo.png" alt="FableFlix" class="logo" style="width: 12rem; cursor: pointer;"  (click)="navigateHome()">
         </div>
         <div class="right" >
           <span class="connectBtn" (click)="navigateLogin()">Conectare</span>
         </div>
     </div>
-    <div class="content">
-        <span>IMAGE</span>
+    <div class="content" 
+    [ngClass]="{'alternativeStepStyle' : step !== 0 }"
+    [ngClass]="{'alternativeStepStyleLarge' : largePanel }"
+    >
+        <span class="screenContainer" *ngIf="step == 0">
+          <img src="../../assets/screens.png" alt="Register" class="screens">
+        </span>
+        
+        <mat-horizontal-stepper linear #stepper id="stepper">
+          <mat-step>
+            <div class="textAlignCenter" style="text-align: center !important;">
+              <span class="stepTitle">PASUL <strong>1</strong> DIN <strong>3</strong></span>
+              <h1>Finalizează configurarea contului.</h1>
+              <span class="stepContent">
+                Fableflix este personalizat special pentru tine. Creează o parolă pentru a viziona pe orice dispozitiv, în orice moment.
+              </span>
+              <div>
+                <button mat-button matStepperNext id="stepperBtn" (click)="incrementStepAndUpdateValueAndValidity()">Înainte</button>
+              </div>
+            </div>
+          </mat-step>
+          <mat-step>
+              <span class="stepTitle">PASUL <strong>1</strong> DIN <strong>3</strong></span>
+              <h1>Creează o parolă pentru a activa abonamentul.</h1>
+              
+                <span style="font-size: 1.2vw;">Au mai rămas doar câțiva pași și gata! <br/> <br/>
+                Nici nouă nu ne plac formularele. <br/></span>
+
+                <form class="example-form" id="regisForm">
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <br/>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Adaugă o parolă</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-checkbox class="example-margin">Nu doresc e-mailuri cu oferte Fableflix.</mat-checkbox>
+                </form>
+                
+              <div>
+                <button mat-button matStepperNext 
+                id="stepperBtn" 
+                (click)="incrementStepAndUpdateValueAndValidity()"
+                style="margin-top: 2% !important"
+                >Înainte</button>
+              </div>
+          </mat-step>
+          <mat-step>
+            <span class="stepContent">
+              <i class='bx bxs-check-circle' id="check"></i>
+
+              <span class="stepTitle">PASUL <strong>1</strong> DIN <strong>3</strong></span>
+
+              <h1>Alege un abonament.</h1>
+              <span class="checkers">
+                <span><i class='bx bx-check' style="color: #E50914; font-size:3vw"></i>Poți anula oricând, fără obligații.</span> <br/>
+                <span><i class='bx bx-check' style="color: #E50914; font-size:3vw"></i>Tot conținutul de pe Netflix, la un tarif avantajos.</span> <br/>
+                <span><i class='bx bx-check' style="color: #E50914; font-size:3vw"></i>Vizionare nelimitată pe toate dispozitivele.</span> <br/>
+              </span>
+              
+              <div>
+                <button mat-button matStepperNext id="stepperBtn" (click)="incrementStepAndUpdateValueAndValidity()" (click)="largePanel = true" style="width: 25vw">Înainte</button>
+              </div>
+            </span>
+          </mat-step>
+          <mat-step>
+            <span class="stepContentLarge">
+              <!-- ***TO STYLE: .content SI stepper -->
+              <span class="stepTitle">PASUL <strong>1</strong> DIN <strong>3</strong></span>
+
+              <h1>Alege abonamentul potrivit pentru tine.</h1>
+              <span class="checkers">
+                <span><i class='bx bx-check' style="color: #E50914; font-size:2vw"></i>Citeste după pofta inimii. Fără reclame.</span> <br/>
+                <span><i class='bx bx-check' style="color: #E50914; font-size:2vw"></i>Recomandări pe gustul tău.</span> <br/>
+                <span><i class='bx bx-check' style="color: #E50914; font-size:2vw"></i>Schimbă sau anulează abonamentul oricând.</span> <br/>
+              </span>
+
+              <div class="fixed-header">
+                TEST
+              </div>
+              
+              <div class="subscriptionGrid">
+                <!-- 5x4 (4 coloane) -->
+
+                <!-- TREBUIE TABLE!! -->
+
+                <span>R1</span>
+                <span>R1</span>
+                <span>R1</span>
+                <span>R1</span>
+                
+                <span>R2</span>
+                <span>R2</span>
+                <span>R2</span>
+                <span>R2</span>
+                
+                <span>R3</span>
+                <span>R3</span>
+                <span>R3</span>
+                <span>R3</span>
+                
+                <span>R4</span>
+                <span>R4</span>
+                <span>R4</span>
+                <span>R4</span>
+              </div>
+
+              <div style="display: flex; justify-content: center">
+                <button mat-button matStepperNext id="stepperBtn" (click)="incrementStepAndUpdateValueAndValidity()" (click)="largePanel = false" style="width: 30vw">Înainte</button>
+              </div>
+            </span>
+          </mat-step>
+          <mat-step>
+              <span class="stepTitle">PASUL <strong>3</strong> DIN <strong>3</strong></span>
+              BBB
+              <div>
+                <button mat-button matStepperNext id="stepperBtn" (click)="incrementStepAndUpdateValueAndValidity()">Înainte</button>
+              </div>
+          </mat-step>
+          <mat-step>
+            <span class="stepTitle">Done</span>
+            <p>You are now done.</p>
+            <div>
+              <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+
     </div>
-    <div class="footer">
-        Footer
-    </div>
+
+  <div class="footer">
+    <app-footer [backgroundCol]="this.backgroundColor"></app-footer>
+  </div>
 </div>

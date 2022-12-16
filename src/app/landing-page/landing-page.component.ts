@@ -38,6 +38,10 @@ export class LandingPageComponent implements OnInit {
     }
   }
 
+  navigateHome() {
+    this.router.navigateByUrl("");
+  }
+
   navigateLogin() {
     this.router.navigateByUrl("/login");
   }
