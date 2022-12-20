@@ -23,6 +23,10 @@
     border: 1px solid #0071EB !important;
 }
 
+:host ::ng-deep .ui-tabview.ui-tabview-top {
+    margin-top: 10vh !important;
+}
+
 ////////////////////////////////////////////////////////////
 
 html {
@@ -54,11 +58,39 @@ html {
     }
 
     .connectBtn {
+        cursor: pointer;
         background-color: white !important;
         border: none !important;
         font-size: 2.5vh !important;
         font-weight: 550 !important;
         color: #333333 !important;
+    }
+}
+
+.spacer {
+    height: 3vh;
+}
+
+.fixed-header {
+    position: inherit;
+    top: inherit;
+    width: 50vw;
+    height:10vh;
+    background-color: red;
+
+    .flexInsideFixed {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        .priceBtn {
+            background-color: blue;
+            height: 10vh;
+            width: 12vh;
+            margin-left: 3vw;
+        }
     }
 }
 
@@ -118,9 +150,28 @@ html {
             
         }
 
-        .fixed-header {
-            width: 100%;
-            background-color: red;
+        .paymentType {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            
+            #paypal {
+                width: 30%;
+            }
+            #paypal:hover {
+                width: 40%;
+            }
+            // #paypal:focus {
+            //     border:1px solid black;
+            // }
+            #mastercard {
+                width: 30%;
+            }
+            #mastercard:hover {
+                width: 40%;
+            }
         }
 
         .subscriptionGrid {

@@ -4,7 +4,8 @@
           <img src="../assets/fableflixloggo.png" alt="FableFlix" class="logo" style="width: 12rem; cursor: pointer;"  (click)="navigateHome()">
         </div>
         <div class="right" >
-          <span class="connectBtn" (click)="navigateLogin()">Conectare</span>
+          <span *ngIf="step < 2" class="connectBtn" (click)="navigateLogin()">Conectare</span>
+          <span *ngIf="step >= 2" class="connectBtn" (click)="navigateHome()">Deconectare</span>
         </div>
     </div>
     <div class="content" 
@@ -14,7 +15,7 @@
         <span class="screenContainer" *ngIf="step == 0">
           <img src="../../assets/screens.png" alt="Register" class="screens">
         </span>
-        
+
         <mat-horizontal-stepper linear #stepper id="stepper">
           <mat-step>
             <div class="textAlignCenter" style="text-align: center !important;">
@@ -60,7 +61,7 @@
             <span class="stepContent">
               <i class='bx bxs-check-circle' id="check"></i>
 
-              <span class="stepTitle">PASUL <strong>1</strong> DIN <strong>3</strong></span>
+              <span class="stepTitle">PASUL <strong>2</strong> DIN <strong>3</strong></span>
 
               <h1>Alege un abonament.</h1>
               <span class="checkers">
@@ -76,8 +77,7 @@
           </mat-step>
           <mat-step>
             <span class="stepContentLarge">
-              <!-- ***TO STYLE: .content SI stepper -->
-              <span class="stepTitle">PASUL <strong>1</strong> DIN <strong>3</strong></span>
+              <span class="stepTitle">PASUL <strong>2</strong> DIN <strong>3</strong></span>
 
               <h1>Alege abonamentul potrivit pentru tine.</h1>
               <span class="checkers">
@@ -85,55 +85,61 @@
                 <span><i class='bx bx-check' style="color: #E50914; font-size:2vw"></i>Recomandări pe gustul tău.</span> <br/>
                 <span><i class='bx bx-check' style="color: #E50914; font-size:2vw"></i>Schimbă sau anulează abonamentul oricând.</span> <br/>
               </span>
-
-              <div class="fixed-header">
-                TEST
-              </div>
               
-              <div class="subscriptionGrid">
-                <!-- 5x4 (4 coloane) -->
-
-                <!-- TREBUIE TABLE!! -->
-
-                <span>R1</span>
-                <span>R1</span>
-                <span>R1</span>
-                <span>R1</span>
-                
-                <span>R2</span>
-                <span>R2</span>
-                <span>R2</span>
-                <span>R2</span>
-                
-                <span>R3</span>
-                <span>R3</span>
-                <span>R3</span>
-                <span>R3</span>
-                
-                <span>R4</span>
-                <span>R4</span>
-                <span>R4</span>
-                <span>R4</span>
-              </div>
+              <p-tabView>
+                <p-tabPanel header="Minim">
+                  <i class='bx bx-check' style="color: #E50914; font-size:1vw"></i>Tarif lunar    - <strong>7,99 EUR</strong> <br/>
+                  <strong style="color:red">x</strong> &nbsp; Audio          - Nu
+                </p-tabPanel>
+                <p-tabPanel header="Standard" [selected]="true">
+                  <i class='bx bx-check' style="color: #E50914; font-size:1vw"></i>Tarif lunar    - <strong>8,99 EUR</strong> <br/>
+                  <i class='bx bx-check' style="color: #E50914; font-size:1vw"></i>Calitate audio - Bună <br/>
+                  <i class='bx bx-check' style="color: #E50914; font-size:1vw"></i>Audio          - Da
+                </p-tabPanel>
+                <p-tabPanel header="Premium">
+                  <i class='bx bx-check' style="color: #E50914; font-size:1vw"></i>Tarif lunar    - <strong>9,99 EUR</strong> <br/>
+                  <i class='bx bx-check' style="color: #E50914; font-size:1vw"></i>Calitate audio - Foarte bună <br/>
+                  <i class='bx bx-check' style="color: #E50914; font-size:1vw"></i>Audio          - Da
+                </p-tabPanel>
+            </p-tabView>
 
               <div style="display: flex; justify-content: center">
-                <button mat-button matStepperNext id="stepperBtn" (click)="incrementStepAndUpdateValueAndValidity()" (click)="largePanel = false" style="width: 30vw">Înainte</button>
+                <button mat-button matStepperNext id="stepperBtn" 
+                (click)="incrementStepAndUpdateValueAndValidity()" (click)="largePanel = false" 
+                style="width: 30vw;"
+                >
+                Înainte</button>
               </div>
             </span>
           </mat-step>
           <mat-step>
-              <span class="stepTitle">PASUL <strong>3</strong> DIN <strong>3</strong></span>
-              BBB
-              <div>
-                <button mat-button matStepperNext id="stepperBtn" (click)="incrementStepAndUpdateValueAndValidity()">Înainte</button>
-              </div>
+                <span class="stepContent">
+                  <i class='bx bx-lock' id="check"></i>
+                  <span class="stepTitle">PASUL <strong>3</strong> DIN <strong>3</strong></span>
+    
+                  <h1>Alege cum plătești</h1>
+                  <span class="paymentType">
+                    <img src="../../assets/paypal.png" alt="PayPal" id="paypal" (click)="paypal()" [ngStyle]="{'border' : paypalBorder ? '1px solid black' : ''}">
+                    <img src="../../assets/mastercard.png" alt="Master Card" id="mastercard" (click)="mastercard()" [ngStyle]="{'border' : mastercardBorder ? '1px solid black' : ''}">
+                  </span>
+                  
+                  <div>
+                    <button mat-button matStepperNext id="stepperBtn" (click)="incrementStepAndUpdateValueAndValidity()" (click)="largePanel = true" style="width: 25vw">Înainte</button>
+                  </div>
+                </span>
           </mat-step>
           <mat-step>
-            <span class="stepTitle">Done</span>
-            <p>You are now done.</p>
-            <div>
+            <span class="stepTitle">Gata</span>
+            <p>Acum te poti bucura de magia cartilor!</p>
+            
+            <button mat-button 
+            id="stepperBtn" 
+            style="margin-top: 2% !important"
+            (click)="navigateToDashboard()"
+            >Începe</button>
+            <!-- <div>
               <button mat-button (click)="stepper.reset()">Reset</button>
-            </div>
+            </div> -->
           </mat-step>
         </mat-horizontal-stepper>
 

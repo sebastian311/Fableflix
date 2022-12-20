@@ -10,6 +10,7 @@ import { ButtonModule }             from 'primeng/button';
 import { CardModule }               from 'primeng/card';
 import { InputTextModule }          from 'primeng/inputtext';
 import { CheckboxModule }           from 'primeng-lts/checkbox';
+import { TabViewModule }            from 'primeng/tabview';
 
 import { MatSliderModule }          from '@angular/material/slider';
 import { MatStepperModule }         from '@angular/material/stepper';
@@ -25,6 +26,7 @@ import { LandingPageComponent }     from './landing-page/landing-page.component'
 import { LoginComponent }           from './login/login.component';
 import { RegisterComponent }        from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { FooterComponent } from './footer/footer.component';
     LandingPageComponent,
     LoginComponent,
     RegisterComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -47,6 +50,7 @@ import { FooterComponent } from './footer/footer.component';
     CardModule,
     InputTextModule,
     CheckboxModule,
+    TabViewModule,
     /* MATERIAL Controls: */
     MatSliderModule,
     MatStepperModule,
