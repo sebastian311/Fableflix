@@ -1,0 +1,27 @@
+nav {
+    position: sticky;
+    top: 0;
+    margin-top: 2vh;
+    border: 1px solid red;
+    background-color: black;
+
+    .options {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    
+    .options > li:not(:first-child) {
+        margin-left: 5vw;
+        margin-top: 1vh;
+    }
+    .options > li:first-child {
+        margin-left: 1vw;
+    }
+    
+    li {
+        list-style-type: none;
+        font-size: medium;
+    }
+}

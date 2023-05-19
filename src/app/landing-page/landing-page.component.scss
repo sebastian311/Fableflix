@@ -1,0 +1,175 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+::ng-deep .ui-dropdown:not(.ui-state-disabled):hover {
+    border-color: white !important;
+}
+::ng-deep .ui-dropdown:not(.ui-state-disabled).ui-state-focus  {
+    box-shadow: none !important;
+}
+::ng-deep .ui-dropdown {
+    border-color: white !important;
+    min-width: 0 !important;
+}
+::ng-deep .ui-dropdown-panel {
+    padding: 0;
+    border: 1px solid #000000 !important;
+    background-color: #000000 !important;
+}
+::ng-deep .ui-dropdown .ui-dropdown-trigger {
+    background-color: black !important;
+}
+::ng-deep .ui-dropdown .ui-dropdown-label {
+    color:white !important;
+    background-color: #000000 !important;
+}
+::ng-deep .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item {
+    color: white !important;
+    background-color: gray !important;
+}
+::ng-deep .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item:hover {
+    background-color: rgb(0, 134, 201) !important;
+}
+::ng-deep .ui-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+::ng-deep .ui-button.ui-button-text-only:nth-child(1) .ui-button-text {
+    padding: 0 !important; 
+    height: 100% !important;
+    font-size: 2vw !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+/////////////////////////////////////////////////////////////////////////////////////////
+
+.landingPageWrapper {
+    background-image: url("../../assets/potentialBackground.png");
+    height: 100vh;
+    border-bottom: 10px solid #222222;
+}
+
+.navbar {
+    display: flex;
+    padding: 20px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.welcomeContainer {
+    margin-top: 7%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+
+    font-family: sans-serif;
+    text-align: center;
+
+    .ui-inputgroup {
+        display: flex;
+    }
+    
+    #startButton {
+        order: 2 !important;
+        border-radius: 0 5px 5px 0 !important;
+        border-color: transparent;
+        border-left: 3px solid #E30813;
+        width: 12vw;
+        background-color: #E30813;
+    }
+}
+
+.sneakPeak {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0 12.5%;
+    height: 55vh;
+}
+
+.borderBottom {
+    display: inline-block;
+    width: 100vw;
+    height: 10px;
+    background-color: #222222;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+
+    .fa {
+        background-color: #303030;
+        height: 10vh;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    .block {
+        background-color: #303030 !important;
+        height: 10vh !important;
+        margin-bottom: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .up {
+        cursor: pointer;
+        user-select: none;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .faq {
+        width: 60%;
+    }
+    .faq-title {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+    }
+
+    /* Style the faq-page panel. Note: hidden by default */
+    .faq-body {
+        padding: 0 18px;
+        background-color: #303030;
+        display: none;
+        overflow: hidden;
+    }
+
+    .bx {
+        font-size: xx-large !important;
+    }
+    
+    .second {
+        display: none;
+        font-size: xx-large !important;
+    }
+
+    .active {
+        display: block;
+    }
+    .inactive {
+        display: none !important;
+    }
+}

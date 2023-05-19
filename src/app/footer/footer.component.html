@@ -1,0 +1,55 @@
+<div class="footer" [style.background-color]="backgroundCol">
+    
+    <h3 class="rest" style="font-size:smaller; height: 10vh">Ai întrebări? Sună la 0800-672-xyz</h3>
+  
+    <div class="mega-menu">
+      <div class="menu-one">
+        <ul>
+          <li><a href="#">Întrebări frecvente</a></li>
+          <li><a href="#">Relații cu investitorii</a></li>
+          <li><a href="#">Declarația de confidențialitate</a></li>
+          <li><a href="#">Test de viteză</a></li>
+        </ul>
+      </div>
+      <div class="menu-two">
+        <ul>
+          <li><a href="#">Asistență</a></li>
+          <li><a href="#">Cariere</a></li>
+          <li><a href="#">Preferințe de cookie</a></li>
+          <li><a href="#">Garanție legală</a></li>
+        </ul>
+      </div>
+    
+      <div class="menu-three">
+        <ul>
+          <li><a href="#">Cont</a></li>
+          <li><a href="#">Modalități de vizionare</a></li>
+          <li><a href="#">Informații legate de companie</a></li>
+          <li><a href="#">Mențiuni legale</a></li>
+        </ul>
+      </div>
+      <div class="menu-four">
+        <ul>
+          <li><a href="#">Centru media</a></li>
+          <li><a href="#">Condiții de utilizare</a></li>
+          <li><a href="#">Contactează-ne</a></li>
+          <li><a href="#">Doar pe Netflix</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <br/>
+  
+    <div class="rest">
+      <p-dropdown [options]="language" [(ngModel)]="selectedLanguage" id="pristina">
+        <ng-template let-item pTemplate="selectedItem">
+          <span style="vertical-align:middle; margin-left: .5em"><i class='bx bx-globe'></i> &nbsp;{{item.label}}</span>
+      </ng-template>
+      </p-dropdown>
+    
+      <br/>
+    
+      Fableflix România
+    </div>
+  
+  </div>

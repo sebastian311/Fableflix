@@ -1,0 +1,44 @@
+<div class="container">
+    <img src="../assets/fableflixloggo.png" alt="FableFlix" class="logo" style="width: 12rem"> <br/>
+
+    <p-card id="card">
+        <span class="connect">Conectare</span>
+
+        <div class="wrapper-input">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText [(ngModel)]="loginCreds.user" style="color: white"> 
+                <label for="float-input" id="floatInput">E-mail sau număr de telefon</label>
+            </span>
+        </div>
+
+        <div class="wrapper-input">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText [(ngModel)]="loginCreds.pass" style="color: white"> 
+                <label for="float-input" id="floatInput">Parolă</label>
+            </span>
+        </div>
+
+        <button pButton type="button" label="Conectare" class="ui-button-danger" id="connectBtn" (click)="login()"></button>
+        <div class="checkboxWrapper" style="color: rgb(180, 180, 180)">
+            <span class="rememberMe" style="float: left">
+                <p-checkbox [(ngModel)]="checked" binary="true"></p-checkbox>
+                Ține-mă minte
+            </span>
+    
+            <span class="needHelp" style="float: right">
+                Ai nevoie de ajutor?
+            </span>
+        </div> <br/>
+        <div class="login-signup-now" style="color: gray; font-size: 2vh">Ești nou pe Fableflix? <a href="/register" style="color: white" id="registerNow">Înregistrează-te acum</a></div>
+        <br/>
+        <p>
+            <span style="font-size:1.8vh; color: gray">
+                Această pagină este protejată prin Google reCAPTCHA pentru a ne asigura că nu ești un robot.
+            </span>
+            <span class="link" (click)="toggleDetails()">Detalii.</span></p>
+            <br/>
+            <span *ngIf="showDetails" style="color: gray; font-size: 1.5vh;">
+                Informațiile colectate prin Google reCAPTCHA respectă Declarația de confidențialitate și Condițiile de furnizare a serviciului Google, fiind folosite pentru furnizarea, întreținerea și îmbunătățirea serviciului reCAPTCHA și în scopuri de siguranță generală (nu sunt folosite în scopul publicității personalizate create de Google).
+            </span>
+    </p-card>
+</div>
