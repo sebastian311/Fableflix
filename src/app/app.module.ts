@@ -36,12 +36,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     LoginComponent,
     RegisterComponent,
     FooterComponent,
-<<<<<<< HEAD
     DashboardComponent,
     CarouselComponent
-=======
-    DashboardComponent
->>>>>>> afcde5ed1993cd21f88f08ffe4358652ffde8f8b
   ],
   imports: [
     BrowserAnimationsModule,

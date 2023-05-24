@@ -18,6 +18,8 @@ h1 {
   grid-template-columns: repeat(3,100%);
   overflow:hidden;
   scroll-behavior: smooth;
+  transition: transform 0.3s ease;
+  border:1px solid green;
 
   section {
     width: 100%;
@@ -55,6 +57,7 @@ h1 {
 
     .arrow__btn {
       position: absolute;
+      cursor: pointer;
       color: #fff;
       text-decoration: none;
       font-size: 6em;

@@ -1,5 +1,5 @@
 export interface BookType {
-    img: string;
+    imageUrl: string;
     title: string;
     genre: string;
 }
